@@ -1,0 +1,38 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <single-spa-router>
+    <nav class="topnav">
+      <a href="/">Home</a>
+      <a href="/react-mfe">React MFE</a>
+      <a href="/vue-mfe">Vue MFE</a>
+    </nav>
+    <main>
+      <route default>
+        <h1>Welcome to Hybrid MFE Application</h1>
+        <p>This combines single-spa and Module Federation</p>
+      </route>
+      <route path="/react-mfe">
+        <application name="@org/react-mfe"></application>
+      </route>
+      <route path="/vue-mfe">
+        <application name="@org/vue-mfe"></application>
+      </route>
+    </main>
+  </single-spa-router>
